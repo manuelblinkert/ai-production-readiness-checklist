@@ -4,6 +4,12 @@ A practical checklist for evaluating whether an AI system is ready for productio
 
 This repository focuses on the engineering realities behind production AI systems: LLM workflows, backend architecture, observability, evals, reliability, cost control, RAG/context design, deployment, and security.
 
+## Quickstart
+
+Start with the [10-Minute AI Production Readiness Self-Check](quickstart.md).
+
+Use it to quickly identify the biggest production risks before going into the full checklist.
+
 ## Who this is for
 
 This checklist is useful for:
@@ -64,6 +70,8 @@ For each checklist area:
 3. Assign severity.
 4. Prioritize fixes.
 5. Convert findings into an implementation roadmap.
+
+For a faster first pass, use the [10-Minute Self-Check](quickstart.md).
 
 ## Status
 
