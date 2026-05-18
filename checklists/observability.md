@@ -13,7 +13,7 @@ Checklist for reviewing whether an AI system can be monitored, debugged, and ope
 ## 2. LLM Call Logging
 
 - [ ] Model provider, model name, and model version are logged.
-- [ ] Prompt/template version is logged.
+- [ ] Prompt template name or version identifier (hash, name, or git ref) is logged alongside each LLM call so behavior changes can be traced to a specific prompt version.
 - [ ] Token usage is tracked.
 - [ ] Latency per model call is tracked.
 - [ ] Error responses from the provider are logged.

@@ -22,7 +22,7 @@ Checklist for reviewing retrieval, context construction, and knowledge usage in 
 
 - [ ] Chunking strategy matches the data type.
 - [ ] Chunks preserve enough context to be useful.
-- [ ] Metadata is stored with chunks.
+- [ ] Metadata is stored with chunks: at minimum source identifier, timestamp, and access permissions. Chunk text alone is not sufficient for attribution or permission enforcement.
 - [ ] Index updates are handled reliably.
 - [ ] Deleted or outdated content can be removed from the index.
 

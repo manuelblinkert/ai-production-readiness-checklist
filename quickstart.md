@@ -12,13 +12,15 @@ Score each area as:
 
 | Area | Question | Score |
 |---|---|---|
-| Architecture | Can we explain the full AI workflow end-to-end? | Green / Yellow / Red |
-| Observability | Can we trace one user request through the whole system? | Green / Yellow / Red |
+| Architecture | Can we explain the full AI workflow end-to-end, including what happens on failure? | Green / Yellow / Red |
+| Reliability | Do we have timeouts, retries, and fallback behavior for every LLM call? | Green / Yellow / Red |
+| Observability | Can we trace one user request through the whole system, including the LLM call? | Green / Yellow / Red |
 | Evals | Do we know if output quality gets worse after prompt, model, or retrieval changes? | Green / Yellow / Red |
-| RAG / Context | Do we know why specific context was selected and used? | Green / Yellow / Red |
-| Cost Control | Do we know the cost per request, workflow, user, or tenant? | Green / Yellow / Red |
+| RAG & Context | Do we know why specific context was selected and included? | Green / Yellow / Red |
+| Cost Control | Do we know the cost per request, workflow, or user? | Green / Yellow / Red |
 | Security & Privacy | Can users only access data they are allowed to see? | Green / Yellow / Red |
 | Deployment | Can we roll back application, prompt, model, and configuration changes? | Green / Yellow / Red |
+| Governance | Is there a named owner and a review process for AI behavior changes? | Green / Yellow / Red |
 
 ## Interpretation
 
@@ -38,16 +40,20 @@ Prioritize the yellow areas before usage grows.
 
 Treat this as a serious risk.
 
-Red areas in **security, observability, evals, or deployment** should be fixed before scaling the system.
+Red areas in **security, observability, reliability, or deployment** should be addressed before scaling the system.
 
 ## Next Step
 
 After this self-check, use the full checklist areas:
 
 - [Architecture](checklists/architecture.md)
+- [Reliability & Failure Handling](checklists/reliability.md)
 - [Observability](checklists/observability.md)
-- [Evals](checklists/evals.md)
+- [Evals & Quality](checklists/evals.md)
 - [RAG & Context Design](checklists/rag-context.md)
 - [Cost Control](checklists/cost-control.md)
 - [Security & Privacy](checklists/security-privacy.md)
-- [Deployment](checklists/deployment.md)
+- [Deployment & Release](checklists/deployment.md)
+- [Governance & Risk](checklists/governance.md)
+
+Or use the [Production Readiness Scorecard](production-readiness-scorecard.md) to record findings across all areas.

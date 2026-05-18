@@ -1,6 +1,6 @@
 # Architecture Checklist
 
-Checklist for reviewing the architecture of an AI system before or during production use.
+Checklist for reviewing the system design of an AI system before or during production use. Covers boundaries, workflow design, orchestration patterns, state, dependencies, and maintainability.
 
 ## 1. System Boundaries
 
@@ -8,7 +8,7 @@ Checklist for reviewing the architecture of an AI system before or during produc
 - [ ] The LLM is treated as one component of the system, not as the entire system.
 - [ ] Business logic is not hidden inside prompts.
 - [ ] Prompt logic, retrieval logic, tool calls, and post-processing are separated.
-- [ ] Critical workflows are documented.
+- [ ] Critical workflows are documented end-to-end: inputs, steps, external calls, and expected outputs.
 
 ## 2. AI Workflow Design
 
@@ -50,7 +50,19 @@ Checklist for reviewing the architecture of an AI system before or during produc
 - [ ] Architecture decisions are documented.
 - [ ] There is a clear owner for each major subsystem.
 
-## 7. Red Flags
+## 7. Orchestration and Tool Use
+
+For systems using multi-step chains, tool calls, or agent loops.
+
+- [ ] The orchestration flow has defined start and end conditions — it cannot loop indefinitely.
+- [ ] Tool and function call inputs are validated before execution.
+- [ ] Tool call outputs are validated before being passed to the next step.
+- [ ] The system limits the number of agent steps or tool calls per request.
+- [ ] Side effects from tool calls — writes, API calls, external actions — are controlled and auditable.
+- [ ] Structured output formats (JSON, schema-constrained) are validated, not assumed to be correct.
+- [ ] The system handles tool call failures without crashing the full workflow.
+
+## 8. Red Flags
 
 - [ ] One giant prompt controls core business logic.
 - [ ] No clear separation between application logic and AI behavior.

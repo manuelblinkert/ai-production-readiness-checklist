@@ -74,7 +74,15 @@ Questions for understanding an AI system before reviewing production readiness.
 - Are prompts/configuration versioned?
 - Who owns incident response?
 
-## 10. Roadmap
+## 10. Governance and Risk
+
+- Who is the named owner of this AI system and its behavior in production?
+- What is the process for reviewing and approving prompt or model changes?
+- Are there workflows where the AI triggers irreversible actions without human review?
+- Has legal or compliance reviewed how this system handles user data and AI-generated output?
+- Who is responsible when the system produces a harmful or incorrect result?
+
+## 11. Roadmap
 
 - What should this system support in 3–6 months?
 - What scaling risks are expected?

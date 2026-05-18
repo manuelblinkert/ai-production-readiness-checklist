@@ -2,7 +2,7 @@
 
 ## 1. Executive Summary
 
-Short summary of the system’s current production readiness.
+Short summary of the system's current production readiness.
 
 **Overall readiness:** Low / Medium / High  
 **Main risk:**  
@@ -39,7 +39,7 @@ Describe the main components:
 - frontend
 - backend
 - LLM provider
-- retrieval/data layer
+- retrieval / data layer
 - database
 - background jobs
 - observability
@@ -55,9 +55,9 @@ Describe the main components:
 
 ## 4. Findings
 
-## Finding 1 — Title
+### Finding 1 — Title
 
-**Area:** Architecture / Observability / Evals / Cost / Security / Deployment  
+**Area:** Architecture / Reliability / Observability / Evals / RAG & Context / Cost / Security / Deployment / Governance  
 **Severity:** Low / Medium / High / Critical  
 **Current state:**  
 **Risk:**  
@@ -65,7 +65,7 @@ Describe the main components:
 
 ---
 
-## Finding 2 — Title
+### Finding 2 — Title
 
 **Area:**  
 **Severity:**  
@@ -75,7 +75,7 @@ Describe the main components:
 
 ---
 
-## Finding 3 — Title
+### Finding 3 — Title
 
 **Area:**  
 **Severity:**  
@@ -90,36 +90,38 @@ Describe the main components:
 | Area | Status | Notes |
 |---|---|---|
 | Architecture | Red / Yellow / Green | |
+| Reliability & Failure Handling | Red / Yellow / Green | |
 | Observability | Red / Yellow / Green | |
-| Evals | Red / Yellow / Green | |
-| RAG / Context | Red / Yellow / Green | |
+| Evals & Quality | Red / Yellow / Green | |
+| RAG & Context Design | Red / Yellow / Green | |
 | Cost Control | Red / Yellow / Green | |
 | Security & Privacy | Red / Yellow / Green | |
-| Deployment | Red / Yellow / Green | |
+| Deployment & Release | Red / Yellow / Green | |
+| Governance & Risk | Red / Yellow / Green | |
 
 ---
 
 ## 6. Prioritized Roadmap
 
-## Immediate Fixes
+### Immediate Fixes
 
-Things to fix first.
-
-- Item 1
-- Item 2
-- Item 3
-
-## Next Improvements
-
-Important but less urgent.
+Things to fix before any further scaling or wider rollout.
 
 - Item 1
 - Item 2
 - Item 3
 
-## Later Improvements
+### Next Improvements
 
-Useful but not blocking.
+Important but not immediately blocking.
+
+- Item 1
+- Item 2
+- Item 3
+
+### Later Improvements
+
+Useful but not blocking production use.
 
 - Item 1
 - Item 2
@@ -129,4 +131,4 @@ Useful but not blocking.
 
 ## 7. Final Recommendation
 
-Clear recommendation on what the team should do next.
+Clear recommendation on what the team should do next, and whether the system is ready for the next stage.
